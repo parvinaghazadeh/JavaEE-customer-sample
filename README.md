@@ -9,6 +9,7 @@ webLogicServer -> local
 ### soap
 - http://127.0.0.1:7001/customer-soap/Service?WSDL
 - http://127.0.0.1:7001/AccountServiceImpl/AccountFacadeImpl?WSDL
+- http://127.0.0.1:7001/CustomerServiceImpl/CustFacadeImpl?WSDL
 
 ### rest
 - GET http://127.0.0.1:7001/customer-rest/api/customer

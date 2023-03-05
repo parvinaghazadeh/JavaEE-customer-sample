@@ -86,30 +86,32 @@
                     <earSourceDirectory>src/main/resources</earSourceDirectory>
 
 
-                    <modules>
-                        <ejbModule>
-                            <groupId>com.tosan</groupId>
-                            <artifactId>customer-dao</artifactId>
-                            <bundleDir>/</bundleDir>
-                        </ejbModule>
+<!--                    <modules>-->
+<!--                        <ejbModule>-->
+<!--                            <groupId>com.tosan</groupId>-->
+<!--                            <artifactId>customer-dao</artifactId>-->
+<!--                            <bundleDir>/</bundleDir>-->
+<!--                        </ejbModule>-->
 <!--                        <ejbModule>-->
 <!--                            <groupId>com.tosan</groupId>-->
 <!--                            <artifactId>customer-service</artifactId>-->
 <!--                            <bundleDir>/</bundleDir>-->
 <!--                        </ejbModule>-->
-                        <webModule>
-                            <groupId>com.tosan</groupId>
-                            <artifactId>customer-soap</artifactId>
-                            <bundleDir>/</bundleDir>
-                            <!-- <contextRoot>/</contextRoot> -->
-                        </webModule>
-                        <webModule>
-                            <groupId>com.tosan</groupId>
-                            <artifactId>customer-rest</artifactId>
-                            <bundleDir>/</bundleDir>
-<!--                            <contextRoot>/rest</contextRoot>-->
-                        </webModule>
-                    </modules>
+<!--                        <webModule>-->
+<!--                            <groupId>com.tosan</groupId>-->
+<!--                            <artifactId>customer-soap</artifactId>-->
+<!--                            <bundleDir>/</bundleDir>-->
+<!--                            &lt;!&ndash; <contextRoot>/</contextRoot> &ndash;&gt;-->
+<!--                        </webModule>-->
+<!--                        <webModule>-->
+<!--                            <groupId>com.tosan</groupId>-->
+<!--                            <artifactId>customer-rest</artifactId>-->
+<!--                            <bundleDir>/</bundleDir>-->
+<!--&lt;!&ndash;                            <contextRoot>/customer-rest</contextRoot>&ndash;&gt;-->
+<!--                        </webModule>-->
+<!--                    </modules>-->
+
+
                 </configuration>
             </plugin>
 

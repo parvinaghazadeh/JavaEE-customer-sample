@@ -2,20 +2,32 @@ package com.tosan.customer_sample.api.dto.customer;
 
 import com.tosan.customer_sample.api.enums.CustomerTypeEnum;
 
+import javax.xml.bind.annotation.*;
+
+@XmlRootElement(name ="CustomerUpdateRequestDto")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name ="customerUpdateRequestDto", namespace ="http://www.tosan.com/customerUpdateRequestDto")
 public class CustomerUpdateRequestDto {
 
+    @XmlElement
     private String firstName;
 
+    @XmlElement
     private String lastName;
 
+    @XmlElement
     private String phone;
 
+    @XmlElement
     private String mobile;
 
+    @XmlElement
     private String birthDate;
 
+    @XmlElement
     private CustomerTypeEnum customerType;
 
+    @XmlElement
     private String nationalCode;
 
     public String getFirstName() {

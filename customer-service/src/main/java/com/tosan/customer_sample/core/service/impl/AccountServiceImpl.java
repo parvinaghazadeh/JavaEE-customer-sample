@@ -17,10 +17,8 @@ import javax.jws.WebService;
 import java.util.List;
 
 @Stateless
-//, endpointInterface = "com.tosan.customer_sample.core.service.AccountService"
-//@WebService(name = "FeeTypeService", serviceName = "FeeTypeService", targetNamespace = "http://www.tosan.com/feeProcessing")
-//@WebService(name = "AccountService", portName = "AccountServicePort", serviceName = "AccountService", targetNamespace = "http://com.tosan.customer_sample.core.service.impl/")
-@WebService(name ="AccountServiceImpl", serviceName ="AccountFacadeImpl", targetNamespace ="http://www.tosan.com/account")
+@WebService(name ="AccountServiceImpl", portName = "AccountServicePort", serviceName ="AccountFacadeImpl"
+        , targetNamespace ="http://www.tosan.com/account")
 public class AccountServiceImpl implements AccountService {
 
     @Inject

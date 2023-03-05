@@ -11,9 +11,12 @@ import com.tosan.customer_sample.core.service.CustomerService;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.jws.WebService;
 import java.util.List;
 
 @Stateless
+@WebService(name ="CustService", portName = "CustServicePort", serviceName ="CustFacadeImpl"
+        , targetNamespace ="http://www.tosan.com/cust")
 public class CustomerServiceImpl implements CustomerService {
 
     @Inject

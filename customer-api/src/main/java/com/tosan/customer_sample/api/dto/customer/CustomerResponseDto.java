@@ -3,31 +3,37 @@ package com.tosan.customer_sample.api.dto.customer;
 import com.tosan.customer_sample.api.entity.AccountEntity;
 import com.tosan.customer_sample.api.enums.CustomerTypeEnum;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElementWrapper;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import java.util.Set;
 
-//@XmlAccessorType(XmlAccessType.FIELD)
-//@XmlType(name = "AMLLimitSearchFilter", namespace = "http://www.tosan.com/customer")
+@XmlRootElement(name ="CustomerResponseDto")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name ="customerResponseDto", namespace ="http://www.tosan.com/customerResponseDto")
 public class CustomerResponseDto {
 
+    @XmlElement
     private Long id;
 
+    @XmlElement
     private String name;
 
+    @XmlElement
     private String phone;
 
+    @XmlElement
     private String mobile;
 
+    @XmlElement
     private String birthDate;
 
+    @XmlElement
     private CustomerTypeEnum customerType;
 
+    @XmlElement
     private String nationalCode;
 
-//    @XmlElementWrapper
+    @XmlElement
+    @XmlElementWrapper
     private Set<AccountEntity> accountList;
 
     public Long getId() {
