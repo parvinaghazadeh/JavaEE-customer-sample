@@ -16,11 +16,6 @@
       <property name="hibernate.connection.username" value="CUSTOMER"/>
       <property name="hibernate.connection.password" value="customer"/>
 
-      <!--      <property name="openjpa.ConnectionURL" value="jdbc:oracle:thin:@localhost:1521:XE"/>-->
-      <!--      <property name="openjpa.ConnectionDriverName" value="oracle.jdbc.OracleDriver"/>-->
-      <!--      <property name="openjpa.ConnectionUserName" value="CUSTOMER"/>-->
-      <!--      <property name="openjpa.ConnectionPassword" value="customer"/>-->
-
       <property name="hibernate.generate_statistics" value="false"/>
       <property name="hibernate.show_sql" value="true"/>
       <property name="hibernate.format_sql" value="true"/>
@@ -43,6 +38,31 @@
       <!--            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>-->
       <!--         or just value="create-tables"-->
 
+    </properties>
+  </persistence-unit>
+
+  <persistence-unit name="persistenceCustomerOpenJpaUnit" transaction-type="JTA">
+<!--    <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>-->
+    <jta-data-source>jdbc/customerDS</jta-data-source>
+    <mapping-file>META-INF/orm.xml</mapping-file>
+    <class>com.tosan.customer_sample.api.entity.CustomerEntity</class>
+    <class>com.tosan.customer_sample.api.entity.AccountEntity</class>
+    <properties>
+      <property name="openjpa.ConnectionURL" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+      <property name="openjpa.ConnectionDriverName" value="oracle.jdbc.OracleDriver"/>
+      <property name="openjpa.ConnectionUserName" value="CUSTOMER"/>
+      <property name="openjpa.ConnectionPassword" value="customer"/>
+
+      <property name="openjpa.jdbc.DBDictionary" value="oracle(batchLimit=0)" />
+      <!--            <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(foreignKeys=true,schemaAction='none')" />-->
+      <property name="openjpa.jdbc.MappingDefaults" value="ForeignKeyDeleteAction=restrict,JoinForeignKeyDeleteAction=restrict" />
+      <property name="openjpa.RestoreState" value="all" />
+      <property name="openjpa.TransactionMode" value="managed" />
+<!--      <property name="openjpa.Log" value="slf4j"/>-->
+      <property name="openjpa.ConnectionFactoryProperties" value="PrintParameters=true" />
+<!--      <property name="openjpa.Compatibility" value="CheckDatabaseForCascadePersistToDetachedEntity=true"/>-->
+
+      <property name="transaction.coordinator_class" value="jta"/>
     </properties>
   </persistence-unit>
 

@@ -12,7 +12,8 @@ import java.util.List;
 @Stateless
 public class AccountDaoImpl implements AccountDao {
 
-    @PersistenceContext(unitName = "persistenceCustomerUnit")
+//    @PersistenceContext(unitName = "persistenceCustomerUnit")
+    @PersistenceContext(unitName = "persistenceCustomerOpenJpaUnit")
     EntityManager entityManager;
 
     @Override

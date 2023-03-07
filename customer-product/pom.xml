@@ -62,6 +62,14 @@
             <type>war</type>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.openjpa</groupId>
+            <artifactId>openjpa</artifactId>
+            <version>2.4.2</version>
+            <type>jar</type>
+            <scope>import</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
