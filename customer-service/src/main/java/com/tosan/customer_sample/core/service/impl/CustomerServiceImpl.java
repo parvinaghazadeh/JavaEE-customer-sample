@@ -13,6 +13,7 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.jws.WebService;
 import java.util.List;
+import java.util.Objects;
 
 @Stateless
 @WebService(name ="CustService", portName = "CustServicePort", serviceName ="CustFacadeImpl"
@@ -29,7 +30,13 @@ public class CustomerServiceImpl implements CustomerService {
     public ResponseDto<CustomerResponseDto> getCustomer(long customerId) {
         CustomerEntity customerEntity = customerDao.findById(customerId);
         ResponseDto<CustomerResponseDto> result = new ResponseDto();
-        return result.message("ok").status("200").result(customerMapper.map(customerEntity)).build();
+        if (Objects.isNull(customerEntity)) {
+            result.message("not found any item!").status("404").build();
+        }
+        else {
+            result.message("ok").status("200").result(customerMapper.map(customerEntity)).build();
+        }
+        return result;
     }
 
     @Override

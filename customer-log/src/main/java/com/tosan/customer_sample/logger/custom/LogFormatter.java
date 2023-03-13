@@ -1,4 +1,4 @@
-package com.tosan.customer_sample.logger;
+package com.tosan.customer_sample.logger.custom;
 
 import java.util.Date;
 import java.util.logging.Formatter;

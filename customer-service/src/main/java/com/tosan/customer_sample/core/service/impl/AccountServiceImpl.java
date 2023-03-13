@@ -39,7 +39,13 @@ public class AccountServiceImpl implements AccountService {
         }
 
         AccountEntity accountEntity = accountDao.findById(accountId);
-        return new ResponseDto("ok", "200", accountMapper.map(accountEntity));
+
+        if (Objects.isNull(accountEntity)) {
+            return new ResponseDto("not found any item!", "404", null);
+        }
+        else {
+            return new ResponseDto("ok", "200", accountMapper.map(accountEntity));
+        }
     }
 
     @Override

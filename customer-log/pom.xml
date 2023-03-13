@@ -20,7 +20,6 @@
     </properties>
 
     <dependencies>
-
         <!-- logging -->
 <!--        <dependency>-->
 <!--            <groupId>junit</groupId>-->
@@ -45,25 +44,6 @@
         <!--            <version>1.5.11</version>-->
         <!--        </dependency>-->
 
-        <!--        <dependency>-->
-        <!--            <groupId>ch.qos.logback</groupId>-->
-        <!--            <artifactId>logback-core</artifactId>-->
-        <!--            <version>0.9.18</version>-->
-        <!--        </dependency>-->
-
-        <!--        <dependency>-->
-        <!--            <groupId>org.slf4j</groupId>-->
-        <!--            <artifactId>slf4j-api</artifactId>-->
-        <!--            <version>1.7.14</version>-->
-        <!--&lt;!&ndash;            <scope>test</scope>&ndash;&gt;-->
-        <!--        </dependency>-->
-
-        <!--        <dependency>-->
-        <!--            <groupId>ch.qos.logback</groupId>-->
-        <!--            <artifactId>logback-classic</artifactId>-->
-        <!--&lt;!&ndash;            <version>1.3.5</version>&ndash;&gt;-->
-        <!--            <version>0.9.18</version>-->
-        <!--        </dependency>-->
     </dependencies>
 
 </project>

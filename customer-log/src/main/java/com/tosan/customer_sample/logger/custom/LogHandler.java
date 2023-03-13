@@ -1,4 +1,4 @@
-package com.tosan.customer_sample.logger;
+package com.tosan.customer_sample.logger.custom;
 
 import java.util.logging.LogRecord;
 import java.util.logging.StreamHandler;
