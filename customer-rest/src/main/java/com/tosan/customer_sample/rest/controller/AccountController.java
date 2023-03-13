@@ -4,6 +4,7 @@ import com.tosan.customer_sample.api.dto.account.AccountCreateRequestDto;
 import com.tosan.customer_sample.api.dto.account.AccountResponseDto;
 import com.tosan.customer_sample.api.dto.account.AccountUpdateRequestDto;
 import com.tosan.customer_sample.api.dto.base.ResponseDto;
+import com.tosan.customer_sample.core.exception.AccountIdNullException;
 import com.tosan.customer_sample.core.service.AccountService;
 
 import javax.enterprise.context.RequestScoped;
@@ -14,6 +15,9 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 @RequestScoped
 @Path("/account")
 @Produces(MediaType.APPLICATION_JSON)
@@ -22,9 +26,13 @@ public class AccountController {
     @Inject
     private AccountService accountService;
 
+    private static Logger logger = LogManager.getLogger(AccountController.class);
+
     @GET
     @Path("/{id}")
-    public ResponseDto<AccountResponseDto> getAccount(@PathParam("id") final long id) {
+    public ResponseDto<AccountResponseDto> getAccount(@PathParam("id") final long id) throws AccountIdNullException {
+        logger.error("Hello, Parvinnnnnnnnnnn!");
+        logger.info("Hello, infoooooooooooooo!");
         return accountService.getAccount(id);
     }
 

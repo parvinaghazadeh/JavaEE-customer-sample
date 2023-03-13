@@ -2,14 +2,17 @@ package com.tosan.customer_sample.dao.impl;
 
 import com.tosan.customer_sample.api.entity.AccountEntity;
 import com.tosan.customer_sample.dao.AccountDao;
+import com.tosan.customer_sample.dao.DaoInterceptor;
 
 import javax.ejb.Stateless;
+import javax.interceptor.Interceptors;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
 
 @Stateless
+@Interceptors(DaoInterceptor.class)
 public class AccountDaoImpl implements AccountDao {
 
 //    @PersistenceContext(unitName = "persistenceCustomerUnit")

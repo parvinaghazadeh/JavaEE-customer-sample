@@ -27,6 +27,12 @@
         </dependency>
 
         <dependency>
+            <groupId>com.tosan</groupId>
+            <artifactId>customer-log</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.apache.openejb</groupId>
             <artifactId>openejb-core</artifactId>
             <version>4.7.5</version>

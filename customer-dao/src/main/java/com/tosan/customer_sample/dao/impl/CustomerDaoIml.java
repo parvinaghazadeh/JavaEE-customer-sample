@@ -3,8 +3,10 @@ package com.tosan.customer_sample.dao.impl;
 
 import com.tosan.customer_sample.api.entity.CustomerEntity;
 import com.tosan.customer_sample.dao.CustomerDao;
+import com.tosan.customer_sample.dao.DaoInterceptor;
 
 import javax.ejb.Stateless;
+import javax.interceptor.Interceptors;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -12,6 +14,7 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Stateless
+@Interceptors(DaoInterceptor.class)
 public class CustomerDaoIml implements CustomerDao {
 
 //    @PersistenceContext(unitName = "persistenceCustomerUnit")
