@@ -27,13 +27,12 @@ public class CustomerServiceImpl implements CustomerService {
     private CustomerMapper customerMapper;
 
     @Override
-    public ResponseDto<CustomerResponseDto> getCustomer(long customerId) {
+    public ResponseDto<CustomerResponseDto> getCustomer(Long customerId) {
         CustomerEntity customerEntity = customerDao.findById(customerId);
         ResponseDto<CustomerResponseDto> result = new ResponseDto();
         if (Objects.isNull(customerEntity)) {
             result.message("not found any item!").status("404").build();
-        }
-        else {
+        } else {
             result.message("ok").status("200").result(customerMapper.map(customerEntity)).build();
         }
         return result;

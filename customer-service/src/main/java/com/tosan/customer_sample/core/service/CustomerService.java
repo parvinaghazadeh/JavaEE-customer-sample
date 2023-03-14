@@ -11,7 +11,7 @@ import java.util.List;
 @Local
 public interface CustomerService {
 
-    ResponseDto<CustomerResponseDto> getCustomer(long customerId);
+    ResponseDto<CustomerResponseDto> getCustomer(Long customerId);
 
     List<CustomerResponseDto> getAllCustomers();
 
